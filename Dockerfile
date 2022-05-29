@@ -40,7 +40,7 @@ COPY lib lib
 RUN mix do compile, release
 
 # prepare release image
-FROM alpine:3.14.2 AS app
+FROM alpine:latest AS app
 # added bash and postgresql-client for entrypoint.sh
 RUN apk add --no-cache openssl ncurses-libs bash postgresql-client
 
