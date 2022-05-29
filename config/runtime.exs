@@ -51,9 +51,6 @@ if config_env() == :prod do
   host = System.get_env("PHX_HOST") || "pento-liveview.herokuapp.com"
   port = String.to_integer(System.get_env("PORT") || "4000")
 
-  host |> IO.inspect(label: "=======================host=====================")
-  port |> IO.inspect(label: "=======================port=====================")
-
   config :pento, PentoWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
     http: [

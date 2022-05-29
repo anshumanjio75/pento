@@ -12,7 +12,7 @@ config :pento,
 
 # Configures the endpoint
 config :pento, PentoWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "0.0.0.0"],
   render_errors: [view: PentoWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Pento.PubSub,
   live_view: [signing_salt: "06t5lKLN"]
