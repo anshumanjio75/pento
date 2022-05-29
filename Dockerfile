@@ -30,7 +30,7 @@ COPY priv priv
 COPY assets assets
 # Compile assets
 RUN mix assets.deploy
-RUN npm run --prefix ./assets deploy
+
 RUN mix phx.digest
 
 # compile and build release
