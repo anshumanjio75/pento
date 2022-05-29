@@ -8,7 +8,7 @@ do
   sleep 2
 done
 
-bin="/app/bin/hello_heroku"
+bin="/app/bin/pento"
 
 # migrate the database
 echo "starting Migrations"
