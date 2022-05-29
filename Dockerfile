@@ -1,5 +1,8 @@
 FROM elixir:1.12-alpine as build
 
+ARG DATABASE_URL
+ARG SECRET_KEY_BASE
+
 # install build dependencies
 RUN apk add --no-cache build-base npm git python3
 
@@ -19,8 +22,8 @@ COPY config config
 RUN mix do deps.get, deps.compile
 
 # build assets
-COPY assets/package.json assets/package-lock.json ./assets/
-RUN npm --prefix ./assets ci --progress=false --no-audit --loglevel=error
+# COPY assets/package.json assets/package-lock.json ./assets/
+# RUN npm --prefix ./assets ci --progress=false --no-audit --loglevel=error
 
 COPY priv priv
 COPY assets assets
