@@ -48,7 +48,7 @@ RUN apk add --no-cache openssl ncurses-libs bash libgcc libstdc++ postgresql-cli
 RUN mkdir /app
 WORKDIR /app
 
-COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/pento ./
+COPY --from=build --chown=nobody:nobody /app/_build/dev/rel/pento ./
 COPY entrypoint.sh .
 
 RUN chown -R nobody: /app
