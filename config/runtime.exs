@@ -20,7 +20,7 @@ if System.get_env("PHX_SERVER") do
   config :pento, PentoWeb.Endpoint, server: true
 end
 
-if config_env() == :prod do
+if config_env() == :dev || :prod do
   database_url =
     System.get_env("DATABASE_URL") ||
       raise """

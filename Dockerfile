@@ -14,7 +14,8 @@ RUN mix local.hex --force
 RUN mix local.rebar --force || true
 
 # set build ENV
-ENV MIX_ENV=prod
+# ENV MIX_ENV=prod
+ENV MIX_ENV=dev
 
 # install mix dependencies
 COPY mix.exs mix.lock ./
